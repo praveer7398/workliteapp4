@@ -161,7 +161,7 @@
 
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/loginButton"
+        android:id="@+id/otpButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
@@ -172,7 +172,7 @@
         android:fontFamily="@font/montaga"
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
-        android:text="Login"
+        android:text="Get OTP"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
