@@ -62,6 +62,32 @@
             android:orientation="vertical"
             android:padding="12dp">
 
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/otpEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/edit_text_bg"
+                android:elevation="8dp"
+                android:fontFamily="@font/montaga"
+                android:hint="otp"
+                android:inputType="text"
+                android:paddingStart="8dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="16dp"
+                android:textColor="@color/black"
+                android:textColorHint="#72000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="VisualLintTextFieldSize"
+                />
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -105,7 +131,7 @@
 
 
 
-                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                <!--<com.google.android.material.textfield.MaterialAutoCompleteTextView
                     android:id="@+id/phoneEditText"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
@@ -203,7 +229,7 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="VisualLintTextFieldSize" />
+                    tools:ignore="VisualLintTextFieldSize" />-->
 
 
 
@@ -219,9 +245,18 @@
                 android:layout_marginStart="12dp"
                 android:layout_marginBottom="12dp"
                 android:fontFamily="@font/montaga"
-                android:text="Please enter 4 digit code we sent on your number as SMS"
+                android:text="Please enter OTP we sent on your number as SMS"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
+            <TextView
+                android:id="@+id/resendBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Resend OTP"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="190dp"
@@ -232,9 +267,12 @@
                 android:background="@drawable/gradient_button"
                 android:elevation="12dp"
                 android:fontFamily="@font/montaga"
+                android:id="@+id/loginButton"
 
 
                 android:text="Login" />
+
+
 
         </LinearLayout>
 
