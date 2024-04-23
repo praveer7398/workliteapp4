@@ -1,5 +1,6 @@
 package com.example.workliteapp
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -22,6 +23,36 @@ class cardFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding=FragmentCardBinding.inflate(layoutInflater)
+
+        binding.cardview1.setOnClickListener {
+            val intent = Intent(context,MainActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.cardview2.setOnClickListener {
+            val intent = Intent(context,MainActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.cardview3.setOnClickListener {
+            val intent = Intent(context,MainActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.cardview4.setOnClickListener {
+            val intent = Intent(context,MainActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.cardview5.setOnClickListener {
+            val intent = Intent(context,MainActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.cardview6.setOnClickListener {
+            val intent = Intent(context,MainActivity::class.java)
+            startActivity(intent)
+        }
         return (binding.root)
     }
 
