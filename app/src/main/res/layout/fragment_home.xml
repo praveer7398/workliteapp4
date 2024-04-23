@@ -112,7 +112,7 @@
             android:fontFamily="@font/montaga"
             android:textSize="20sp"
             android:textColor="@android:color/black"
-            android:layout_marginStart="20dp"/>
+            android:layout_marginStart="25dp"/>
     </LinearLayout>
 
     <!-- Today's task section -->
