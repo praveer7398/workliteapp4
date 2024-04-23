@@ -154,5 +154,3 @@ class otpActivity : AppCompatActivity() {
         inputOTP=findViewById(R.id.otpEditText)
     }
 }
-    }
-}

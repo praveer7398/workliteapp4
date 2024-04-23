@@ -82,49 +82,55 @@
         android:layout_marginBottom="20dp" />
 
     <!-- Check-in and check-out buttons -->
+    <!-- Check-in and check-out buttons -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="4dp">
+
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="160dp"
             android:layout_height="100dp"
-            android:drawableStart="@drawable/checkin"
+            android:text="Check \nIn\n 9:00 A.M"
             android:background="@drawable/lineargradient_button"
             android:elevation="12dp"
             android:fontFamily="@font/montaga"
             android:textStyle="bold"
             android:textSize="20sp"
-            android:text="Check \nIn\n 9:00 A.M" />
+            android:textColor="@android:color/black" >
+
+        </androidx.appcompat.widget.AppCompatButton>
+
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="162dp"
             android:layout_height="100dp"
-            android:layout_margin="5dp"
-            android:drawableStart="@drawable/checkout"
+            android:text="Check \nOut\n 5:00 P.M"
             android:background="@drawable/lineargradient_button2"
+            android:drawableStart="@drawable/checkout"
             android:elevation="12dp"
             android:fontFamily="@font/montaga"
-            android:textStyle="bold"
-            android:text="Check Out\n 5:00 P.M"
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="25dp"/>
     </LinearLayout>
 
     <!-- Today's task section -->
+
+    <!-- Scrollable container for task cards -->
     <TextView
         android:id="@+id/todaytask"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Today's Task"
         android:layout_marginTop="2dp"
-        android:gravity="center"
         android:fontFamily="@font/montaga"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="Today's Task"
         android:textColor="@color/black"
         android:textSize="28sp"
-        android:textStyle="bold"
-        android:padding="8dp"/>
+        android:textStyle="bold" />
 
-    <!-- Scrollable container for task cards -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
