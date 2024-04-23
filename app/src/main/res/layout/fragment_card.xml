@@ -12,17 +12,16 @@
         android:orientation="vertical"
         android:layout_marginTop="20dp">
 
-        <soup.neumorphism.NeumorphButton
+      <!-- <soup.neumorphism.NeumorphButton
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Online Service"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="22sp"
             android:layout_gravity="center"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="20dp"
-            />
+            />-->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -40,7 +39,7 @@
                 />
             <soup.neumorphism.NeumorphCardView
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="150dp"
                 app:neumorph_shadowColorDark="#FF9800"
                 app:neumorph_shadowColorLight="#FF9800"
                 app:neumorph_shadowElevation="6dp"
@@ -117,12 +116,12 @@
                     <soup.neumorphism.NeumorphImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/chef"
+                        android:src="@drawable/sweep"
                         />
                     <soup.neumorphism.NeumorphTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Chef"
+                        android:text="Sweeper"
                         android:textColor="@color/black"
                         android:textStyle="bold"
                         android:textSize="16dp"
@@ -155,12 +154,12 @@
                     <soup.neumorphism.NeumorphImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/chef"
+                        android:src="@drawable/nany"
                         />
                     <soup.neumorphism.NeumorphTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Chef"
+                        android:text="Nanny"
                         android:textColor="@color/black"
                         android:textStyle="bold"
                         android:textSize="16dp"
@@ -192,12 +191,12 @@
                     <soup.neumorphism.NeumorphImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/chef"
+                        android:src="@drawable/washerman"
                         />
                     <soup.neumorphism.NeumorphTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Chef"
+                        android:text="Laundary"
                         android:textColor="@color/black"
                         android:textStyle="bold"
                         android:textSize="16dp"
@@ -229,12 +228,12 @@
                     <soup.neumorphism.NeumorphImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/chef"
+                        android:src="@drawable/gardener"
                         />
                     <soup.neumorphism.NeumorphTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Chef"
+                        android:text="Gardener"
                         android:textColor="@color/black"
                         android:textStyle="bold"
                         android:textSize="16dp"
@@ -266,12 +265,87 @@
                     <soup.neumorphism.NeumorphImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/chef"
+                        android:src="@drawable/householdchores"
                         />
                     <soup.neumorphism.NeumorphTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Chef"
+                        android:text="Household"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="16dp"
+
+                        />
+
+                </LinearLayout>
+
+            </soup.neumorphism.NeumorphCardView>
+
+
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:neumorph_shadowColorDark="#FF9800"
+                app:neumorph_shadowColorLight="#FF9800"
+                app:neumorph_shadowElevation="6dp"
+                android:layout_marginTop="12dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:padding="16dp"
+                    android:orientation="vertical"
+                    >
+                    <soup.neumorphism.NeumorphImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/householdchores"
+                        />
+                    <soup.neumorphism.NeumorphTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Household"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="16dp"
+
+                        />
+
+                </LinearLayout>
+
+            </soup.neumorphism.NeumorphCardView>
+
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:neumorph_shadowColorDark="#FF9800"
+                app:neumorph_shadowColorLight="#FF9800"
+                app:neumorph_shadowElevation="6dp"
+                android:layout_marginTop="12dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:padding="16dp"
+                    android:orientation="vertical"
+                    >
+                    <soup.neumorphism.NeumorphImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/householdchores"
+                        />
+                    <soup.neumorphism.NeumorphTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Household"
                         android:textColor="@color/black"
                         android:textStyle="bold"
                         android:textSize="16dp"
