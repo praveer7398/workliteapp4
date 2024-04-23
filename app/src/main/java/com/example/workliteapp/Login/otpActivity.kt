@@ -23,18 +23,18 @@ import com.google.firebase.auth.PhoneAuthProvider
 import java.util.concurrent.TimeUnit
 
 class otpActivity : AppCompatActivity() {
-    private lateinit var auth:FirebaseAuth
-    private lateinit var verifyBtn : Button
-    private lateinit var resendTV : TextView
-    private lateinit var OTP : String
-    private lateinit var inputOTP:EditText
-    private lateinit var resendToken : PhoneAuthProvider.ForceResendingToken
-    private lateinit var phoneNumber : String
+    private lateinit var auth: FirebaseAuth
+    private lateinit var verifyBtn: Button
+    private lateinit var resendTV: TextView
+    private lateinit var OTP: String
+    private lateinit var inputOTP: EditText
+    private lateinit var resendToken: PhoneAuthProvider.ForceResendingToken
+    private lateinit var phoneNumber: String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_otp)
 
-        OTP= intent.getStringExtra("OTP").toString()
+          OTP= intent.getStringExtra("OTP").toString()
         resendToken=intent.getParcelableExtra("resendToken")!!
         phoneNumber=intent.getStringExtra("phoneNumber")!!
 
@@ -145,12 +145,14 @@ class otpActivity : AppCompatActivity() {
             }
     }
     private fun sendToMain(){
-        startActivity(Intent(this, MainActivity::class.java))
+      //  startActivity(Intent(this, MainActivity::class.java))
     }
     private fun init(){
         auth=FirebaseAuth.getInstance()
         verifyBtn=findViewById(R.id.loginButton)
         resendTV=findViewById(R.id.resendBtn)
         inputOTP=findViewById(R.id.otpEditText)
+    }
+}
     }
 }

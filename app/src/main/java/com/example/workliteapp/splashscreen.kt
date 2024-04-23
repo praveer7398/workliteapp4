@@ -9,6 +9,8 @@ import android.widget.ImageView
 import androidx.core.content.ContextCompat
 import com.example.workliteapp.Login.signinActivity
 
+
+
 class splashscreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,7 +18,7 @@ class splashscreen : AppCompatActivity() {
 
         // Delay for 2 seconds and then start the main activity
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, signinActivity::class.java)
+            val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
             finish()
         }, 2000) // 2000 milliseconds

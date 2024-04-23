@@ -31,7 +31,7 @@ class signinActivity : AppCompatActivity(){
         //binding=ActivitySigninBinding.inflate(layoutInflater)
 
         //setContentView(binding.root)
-        init()
+       init()
         sendOTPButton.setOnClickListener {
             number = phoneNumberET.text.trim().toString()
             if (number.isNotEmpty()) {
