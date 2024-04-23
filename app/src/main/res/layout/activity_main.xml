@@ -18,7 +18,7 @@
             android:id="@+id/bottomNavigationView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
+
             android:background="#BD9B72"
             android:padding="2dp"
             app:itemIconTint="@color/black"
