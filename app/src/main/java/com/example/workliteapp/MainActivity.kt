@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_home -> setCurrentFragment(HomeFragment())
-                R.id.nav_gift -> setCurrentFragment(HomeFragment())
+                R.id.nav_gift -> setCurrentFragment(rFragment())
                 R.id.nav_add -> setCurrentFragment(HomeFragment())
                 R.id.nav_pay -> setCurrentFragment(PayFragment())
                 R.id.nav_profile -> setCurrentFragment(ProfileFragment())

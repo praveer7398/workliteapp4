@@ -145,7 +145,7 @@ class otpActivity : AppCompatActivity() {
             }
     }
     private fun sendToMain(){
-      //  startActivity(Intent(this, MainActivity::class.java))
+        startActivity(Intent(this, MainActivity::class.java))
     }
     private fun init(){
         auth=FirebaseAuth.getInstance()

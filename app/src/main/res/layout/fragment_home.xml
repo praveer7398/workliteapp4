@@ -89,7 +89,9 @@
         android:orientation="horizontal"
         android:layout_marginTop="4dp">
 
+
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/checkInButton"
             android:layout_width="160dp"
             android:layout_height="100dp"
             android:text="Check \nIn\n 9:00 A.M"
@@ -98,11 +100,12 @@
             android:fontFamily="@font/montaga"
             android:textStyle="bold"
             android:textSize="20sp"
-            android:textColor="@android:color/black" >
+            android:textColor="@android:color/black" />
 
-        </androidx.appcompat.widget.AppCompatButton>
+
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/checkOutButton"
             android:layout_width="162dp"
             android:layout_height="100dp"
             android:text="Check \nOut\n 5:00 P.M"
@@ -113,6 +116,8 @@
             android:textSize="20sp"
             android:textColor="@android:color/black"
             android:layout_marginStart="25dp"/>
+
+
     </LinearLayout>
 
     <!-- Today's task section -->

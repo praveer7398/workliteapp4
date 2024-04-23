@@ -90,7 +90,7 @@
         android:layout_height="wrap_content"
         android:text="Submit"
         android:layout_gravity="center"
-        android:background="@color/colorPrimary"
+
         android:textColor="@android:color/white"
         android:padding="16dp"/>
 
