@@ -39,6 +39,7 @@
                 android:layout_centerInParent="true"
                 />
             <soup.neumorphism.NeumorphCardView
+
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 app:neumorph_shadowColorDark="#FF9800"
@@ -59,6 +60,7 @@
 
             >
             <soup.neumorphism.NeumorphCardView
+                android:id="@+id/cardview1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowWeight="1"
@@ -97,6 +99,7 @@
 
 
             <soup.neumorphism.NeumorphCardView
+                android:id="@+id/cardview2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowWeight="1"
@@ -135,6 +138,7 @@
 
 
             <soup.neumorphism.NeumorphCardView
+                android:id="@+id/cardview3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowWeight="1"
@@ -172,6 +176,7 @@
             </soup.neumorphism.NeumorphCardView>
 
             <soup.neumorphism.NeumorphCardView
+                android:id="@+id/cardview4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowWeight="1"
@@ -209,6 +214,7 @@
             </soup.neumorphism.NeumorphCardView>
 
             <soup.neumorphism.NeumorphCardView
+                android:id="@+id/cardview5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowWeight="1"
@@ -246,6 +252,7 @@
             </soup.neumorphism.NeumorphCardView>
 
             <soup.neumorphism.NeumorphCardView
+                android:id="@+id/cardview6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_rowWeight="1"

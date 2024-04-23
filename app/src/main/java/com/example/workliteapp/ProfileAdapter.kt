@@ -22,6 +22,7 @@ class ProfileAdapter(private val context: Context, private val list: List<Profil
         val currentItem = list[position]
         holder.binding.textView11.text = currentItem.name
         holder.binding.textView12.text = currentItem.phoneNumber
+        holder.binding.imageView4.setImageResource(currentItem.imageResourceId)
         // Load image if you have any
         // Glide.with(context).load(currentItem.image).into(holder.binding.imageView4)
 
