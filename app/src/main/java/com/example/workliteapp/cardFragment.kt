@@ -23,13 +23,14 @@ class cardFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentCardBinding.inflate(inflater, container, false)
+        binding = FragmentCardBinding.inflate(layoutInflater)
 
         //  retrieveDataFromFirestore()
 
 
-        val intent = Intent(context, CardActivity1::class.java)
-        startActivity(intent)
+       /* val intent = Intent(context, CardActivity1::class.java)
+        startActivity(intent)*/
+
 
 
         binding.cardview1.setOnClickListener {

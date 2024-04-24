@@ -9,11 +9,11 @@
     <ImageView
         android:layout_width="221dp"
         android:layout_height="136dp"
-        android:src="@drawable/"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="566dp">
 
-    </ImageView>
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="566dp"/>
+
+
 
     <TextView
         android:id="@+id/tv"
@@ -24,6 +24,6 @@
         android:textSize="50sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="181dp" ></TextView>
+        tools:layout_editor_absoluteY="181dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
