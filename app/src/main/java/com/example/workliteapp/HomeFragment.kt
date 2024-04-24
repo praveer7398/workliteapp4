@@ -27,9 +27,9 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentHomeBinding.inflate(inflater, container, false)
+        binding = FragmentHomeBinding.inflate(layoutInflater)
 
-            retrieveDataFromFirestore()
+          //  retrieveDataFromFirestore()
 
         return binding.root
 
@@ -38,7 +38,7 @@ class HomeFragment : Fragment() {
     // Call method to retrieve data
 
 
-    private fun retrieveDataFromFirestore() {
+   /* private fun retrieveDataFromFirestore() {
         val db = Firebase.firestore
         val productsRef = db.collection("Products")
 
@@ -70,7 +70,7 @@ class HomeFragment : Fragment() {
                 Toast.makeText(requireContext(), "Error retrieving data: ${e.message}", Toast.LENGTH_SHORT)
                     .show()
             }
-    }
+    }*/
 }
 
 
