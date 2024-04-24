@@ -30,8 +30,8 @@ class ProfileFragment : Fragment() {
             ProfileItem("Sunita", "9015768567", R.drawable.person),
             ProfileItem("Sunita", "9015768567", R.drawable.person),
             ProfileItem("Sunita", "9015768567", R.drawable.person),
-            ProfileItem("Sunita", "9015768567", R.drawable.person),
-            ProfileItem("Sunita", "9015768567", R.drawable.person),
+            ProfileItem("Naina", "9015768567", R.drawable.person),
+            ProfileItem("Vineeta", "9015768567", R.drawable.person),
             ProfileItem("Sunita", "9015768567", R.drawable.person),
             ProfileItem("Sunita", "9015768567", R.drawable.person),
             // Add more ProfileItems as needed
