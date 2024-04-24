@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_margin="5dp"
     app:cardCornerRadius="7dp"
-    android:background="#BD9B72"
+    android:background="#D3A496"
     android:padding="20dp"
 
     app:cardElevation="3dp">
