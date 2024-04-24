@@ -25,7 +25,6 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Sample data for ProfileItems
         val profileItems = listOf(
 
             ProfileItem("Mala",  "7392659120", R.drawable.woman12),
