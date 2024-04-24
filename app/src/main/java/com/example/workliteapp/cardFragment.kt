@@ -7,11 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.workliteapp.Card.CardActivity1
-import com.example.workliteapp.Card.CardActivity2
-import com.example.workliteapp.Card.CardActivity3
-import com.example.workliteapp.Card.CardActivity4
 import com.example.workliteapp.databinding.FragmentCardBinding
-import com.example.workliteapp.databinding.FragmentHomeBinding
 
 
 class cardFragment : Fragment() {
@@ -36,18 +32,27 @@ class cardFragment : Fragment() {
         startActivity(intent)
 
 
+        binding.cardview1.setOnClickListener {
+            val intent = Intent(context, CardActivity1::class.java)
+            startActivity(intent)
+        }
+
+        binding.cardview2.setOnClickListener {
+            val intent = Intent(context, CardActivity1::class.java)
+            startActivity(intent)
+        }
+
+        binding.cardview3.setOnClickListener {
+            val intent = Intent(context, CardActivity1::class.java)
+            startActivity(intent)
+        }
         binding.cardview4.setOnClickListener {
-            val intent = Intent(context, CardActivity2::class.java)
+            val intent = Intent(context, CardActivity1::class.java)
             startActivity(intent)
         }
 
         binding.cardview5.setOnClickListener {
-            val intent = Intent(context, CardActivity3::class.java)
-            startActivity(intent)
-        }
-
-        binding.cardview6.setOnClickListener {
-            val intent = Intent(context, CardActivity4::class.java)
+            val intent = Intent(context, CardActivity1::class.java)
             startActivity(intent)
         }
         return (binding.root)
