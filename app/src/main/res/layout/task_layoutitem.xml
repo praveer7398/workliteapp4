@@ -32,6 +32,14 @@
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 android:padding="8dp"/>
+
+            <CheckBox
+                android:id="@+id/checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Completed"
+                android:textColor="@color/black"
+                android:onClick="onCheckboxClicked"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
