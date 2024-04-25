@@ -5,10 +5,12 @@
         android:title="Home"
         android:icon="@drawable/home"
         android:iconTint="@color/black"/>
+
     <item
-        android:id="@+id/nav_gift"
-        android:title="Reward"
-        android:icon="@drawable/gift" />
+        android:id="@+id/nav_profile"
+        android:title="Profile"
+        android:icon="@drawable/person" />
+
 
     <item
         android:id="@+id/nav_add"
@@ -19,8 +21,10 @@
         android:id="@+id/nav_pay"
         android:title="Pay"
         android:icon="@drawable/pay" />
+
     <item
-        android:id="@+id/nav_profile"
-        android:title="Profile"
-        android:icon="@drawable/person" />
+        android:id="@+id/nav_gift"
+        android:title="Reward"
+        android:icon="@drawable/gift" />
+
 </menu>

@@ -49,16 +49,16 @@
         android:fontFamily="@font/montaga"
         android:gravity="center"
         android:padding="15dp"
-        android:text="XYZ, \nYou are the Employee of the Month!!"
+        android:text="XYZ, \nYou are the Employee\n of the Month!!"
         android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/imageView8"
-        app:layout_constraintVertical_bias="0.74" />
+        app:layout_constraintVertical_bias="0.806" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

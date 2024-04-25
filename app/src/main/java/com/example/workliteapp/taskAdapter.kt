@@ -21,8 +21,8 @@ class taskAdapter(private val context: Context, private val list: List<TaskItem>
 
     override fun onBindViewHolder(holder: CartViewHolder, position: Int) {
         val currentItem = list[position]
-        holder.binding.task1.text = currentItem.tasktitle
-        holder.binding.taskDueDate1.text = currentItem.date
+        holder.binding.task1.text = currentItem.taskName
+        holder.binding.taskDueDate1.text = currentItem.taskdate
 
 
     }

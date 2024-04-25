@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.workliteapp.databinding.FragmentHomeBinding
@@ -32,85 +33,53 @@ class HomeFragment : Fragment() {
     ): View? {
         binding = FragmentHomeBinding.inflate(layoutInflater)
 
-        getProducts()
-        // retrieveDataFromFirestore()
+        //    getProducts()
+        retrieveDataFromFirestore()
         return binding.root
 
     }
 
-    // Call method to retrieve data
 
 
-    /*   private fun retrieveDataFromFirestore() {
+
+    private fun retrieveDataFromFirestore() {
         val db = Firebase.firestore
         val productsRef = db.collection("Products")
+
+        val taskItemList = mutableListOf<TaskItem>() // Step 1: Create an empty list
 
         productsRef.get()
             .addOnSuccessListener { result ->
                 for (document in result) {
-                    // Access document fields and show in UI or process as needed
-                    val taskName = document.getString("taskName")
-                    val taskDate = document.getString("taskDate")
-
+                    // Step 2: Create TaskItem objects and add them to the list
+                    val taskName = document.getString("taskName") ?: ""
+                    val taskDate = document.getString("taskdate") ?: ""
+                    val taskItem = TaskItem(taskName, taskDate)
+                    taskItemList.add(taskItem)
 
                     // Example: Display data in Logcat
                     Log.d(
                         "FirestoreData",
                         "Task Name: $taskName, Task Date: $taskDate",
                     )
-
-                    // Example: Display data in Toast
-                    Toast.makeText(
-                        requireContext(),
-                        "Task Name: $taskName, Task Date: $taskDate",
-                        Toast.LENGTH_SHORT
-                    ).show()
                 }
+
+                // Step 3: Initialize RecyclerView adapter with the list and set it to RecyclerView
+                adapter = taskAdapter(requireContext(), taskItemList)
+                binding.cartRecycler.adapter = adapter
+                binding.cartRecycler.layoutManager = LinearLayoutManager(requireContext())
             }
             .addOnFailureListener { e ->
                 Log.e("FirestoreError", "Error retrieving data", e)
-                Toast.makeText(requireContext(), "Error retrieving data: ${e.message}", Toast.LENGTH_SHORT)
+                Toast.makeText(
+                    requireContext(),
+                    "Error retrieving data: ${e.message}",
+                    Toast.LENGTH_SHORT
+                )
                     .show()
             }
     }
-}*/
-
-    /*  override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        val profileItems = CollectionUtils.listOf(
-
-            TaskItem("Mala", "7392659120"),
-            TaskItem("Mala", "7392659120"),
-            TaskItem("Mala", "7392659120"),
-            TaskItem("Mala", "7392659120"),
-            TaskItem("Mala", "7392659120"),
-            TaskItem("Mala", "7392659120"),
-
-            // Add more ProfileItems as needed
-        )
-
-        // Initialize adapter with the provided data
-        adapter = taskAdapter(requireContext(), profileItems)
-
-        // Set layout manager and adapter for RecyclerView
-        binding.cartRecycler.layoutManager = LinearLayoutManager(requireContext())
-        binding.cartRecycler.adapter = adapter
-    }
-}*/
-
-
-    private fun getProducts() {
-        val list = ArrayList<TaskItem>()
-        Firebase.firestore.collection("Products")
-            .get().addOnSuccessListener {
-                list.clear()
-                for (doc in it.documents) {
-                    val data = doc.toObject(TaskItem::class.java)
-                    list.add(data!!)
-                }
-                binding.cartRecycler.adapter = taskAdapter(requireContext(), list)
-            }
-    }
 }
+
+
 
