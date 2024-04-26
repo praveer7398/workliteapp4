@@ -9,6 +9,7 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import android.widget.Toast
+import androidx.core.content.ContentProviderCompat.requireContext
 
 import com.example.workliteapp.R
 import com.example.workliteapp.databinding.ActivityCard1Binding
@@ -68,14 +69,14 @@ class CardActivity1 : AppCompatActivity() {
             }
         }
 
-               binding.submitButton.setOnClickListener {
-           validateData()
+        binding.submitButton.setOnClickListener {
+            validateData()
         }
+
     }
 
 
-
-    private fun validateData() {
+       private fun validateData() {
         if (binding.fullNameEditText.text.toString().isEmpty()){
             binding.fullNameEditText.requestFocus()
             binding.fullNameEditText.error= "Empty"
@@ -102,11 +103,13 @@ class CardActivity1 : AppCompatActivity() {
            binding.registerPasswordEditText.text.toString(),
 
 
+
+
         )
         db.document(key).set(data).addOnSuccessListener {
          //   dialog.dismiss()
 
-            Toast.makeText(this, "Product added", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@CardActivity1, "sucessfully added", Toast.LENGTH_SHORT).show()
             binding.fullNameEditText.text = null
         }
             .addOnFailureListener { e ->
@@ -126,10 +129,8 @@ class CardActivity1 : AppCompatActivity() {
 
 
 
-    }
 
-
-
+}
 
 
 
