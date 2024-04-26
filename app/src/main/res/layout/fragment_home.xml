@@ -63,6 +63,7 @@
             android:textSize="18sp" />
 
         <TextView
+            android:id="@+id/logout"
             android:layout_width="101dp"
             android:layout_height="30dp"
             android:layout_marginLeft="90dp"
@@ -100,6 +101,7 @@
             android:layout_height="100dp"
             android:gravity="center"
             android:text="Check \nIn\n 9:00 A.M"
+            android:drawableStart="@drawable/checkin"
             android:background="@drawable/lineargradient_button"
             android:elevation="12dp"
             android:fontFamily="@font/montaga"
@@ -135,7 +137,7 @@
         android:fontFamily="@font/montaga"
         android:gravity="center"
         android:padding="8dp"
-        android:text="Today's Task"
+        android:text="Task (Karya)"
         android:textColor="@color/black"
         android:textSize="28sp"
         android:textStyle="bold" />

@@ -1,5 +1,8 @@
 package com.example.workliteapp
 
+import android.app.AlertDialog
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -12,11 +15,13 @@ import android.widget.Toast
 import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.workliteapp.Login.signinActivity
 import com.example.workliteapp.databinding.FragmentHomeBinding
 import com.google.android.gms.common.util.CollectionUtils
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import java.lang.System.exit
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -46,6 +51,27 @@ class HomeFragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val logoutButton = view.findViewById<TextView>(R.id.logout) // Replace with actual ID if set in layout
+
+
+        logoutButton.setOnClickListener {
+            val confirmationDialog = AlertDialog.Builder(context)
+                .setTitle("Logout Confirmation")
+                .setMessage("Are you sure you want to logout?")
+                .setPositiveButton("Logout") { _, _ ->
+
+
+                    val intent = Intent(context, signinActivity::class.java)
+                    startActivity(intent)
+
+
+                }
+                .setNegativeButton("Cancel", null) // Do nothing on cancellation
+                .create()
+            confirmationDialog.show()
+        }
+
 
         val currentDateTextView = view.findViewById<TextView>(R.id.datetv)
         val currentTimeTextView1 = view.findViewById<TextView>(R.id.checkintime)
@@ -132,6 +158,8 @@ class HomeFragment : Fragment() {
                     .show()
             }
     }
+
+
 }
 
 
