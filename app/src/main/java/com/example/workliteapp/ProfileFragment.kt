@@ -27,10 +27,10 @@ class ProfileFragment : Fragment() {
 
         val profileItems = listOf(
 
-            ProfileItem("Mala",  "7392659120", R.drawable.woman12),
-            ProfileItem("Deepa","9251329227", R.drawable.woman13),
-            ProfileItem("Sonam", "6398462203", R.drawable.woman14),
-            ProfileItem("Mahima", "8645920410", R.drawable.woman15),
+            ProfileItem("Meena",  "7706017030", R.drawable.woman12),
+            ProfileItem("Deepa","9084243046", R.drawable.woman13),
+            ProfileItem("Sonam", "8791882669", R.drawable.woman14),
+            ProfileItem("Mahima", "8318427641", R.drawable.woman15),
             ProfileItem("Pratibha", "9015768567", R.drawable.woman1),
             ProfileItem("Ragini", "8874356772", R.drawable.woman2),
             ProfileItem("Sushila", "6954302105", R.drawable.woman4),

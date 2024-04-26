@@ -2,8 +2,11 @@ package com.example.workliteapp
 
 
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.workliteapp.databinding.LayoutProfileItemBinding
 
@@ -28,7 +31,27 @@ class ProfileAdapter(private val context: Context, private val list: List<Profil
 
         // You can set click listeners or any other functionality here
         // holder.itemView.setOnClickListener { /* Handle item click */ }
-    }
+        // Set click listener for WhatsApp chat
+        holder.binding.imageView4.setOnClickListener {
+            val phoneNumber =
+                currentItem.phoneNumber // Assuming phoneNumber is a String field in your data object
+
+            // Check if WhatsApp is installed
+
+                val intent = Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("https://api.whatsapp.com/send?phone=$phoneNumber"));
+                context.startActivity(intent);
+            }
+        }
+
+
+
+
+
+
+
+
+
 
     override fun getItemCount(): Int {
         return list.size

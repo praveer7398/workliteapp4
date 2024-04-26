@@ -27,7 +27,7 @@ class CardActivity1 : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        val spinner = findViewById<Spinner>(R.id.spinnerGender)
+       /* val spinner = findViewById<Spinner>(R.id.spinnerGender)
 
         val cOptions = arrayOf(
             "Please select your job type ",
@@ -66,7 +66,7 @@ class CardActivity1 : AppCompatActivity() {
                 Toast.makeText(this@CardActivity1, "Please select a category", Toast.LENGTH_SHORT)
                     .show()
             }
-        }
+        }*/
 
                binding.submitButton.setOnClickListener {
            validateData()
