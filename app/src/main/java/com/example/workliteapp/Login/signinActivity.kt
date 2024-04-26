@@ -1,7 +1,10 @@
 package com.example.workliteapp.Login
 
+import android.content.ContentValues
+import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -68,6 +71,7 @@ class signinActivity : AppCompatActivity(){
                         sendToMain()
 
                     } else {
+                        Log.d(ContentValues.TAG, "signInWithCredential:failure", task.exception)
                         // Sign in failed, display a message and update the UI
 
                         if (task.exception is FirebaseAuthInvalidCredentialsException) {
@@ -100,8 +104,10 @@ class signinActivity : AppCompatActivity(){
 
                 if (e is FirebaseAuthInvalidCredentialsException) {
                     // Invalid request
+                    Log.d(TAG, "onVerificationFailed: ${e.toString()}")
                 } else if (e is FirebaseTooManyRequestsException) {
                     // The SMS quota for the project has been exceeded
+                    Log.d(TAG, "onVerificationFailed: ${e.toString()}")
                 } else if (e is FirebaseAuthMissingActivityForRecaptchaException) {
                     // reCAPTCHA verification attempted with null Activity
                 }
