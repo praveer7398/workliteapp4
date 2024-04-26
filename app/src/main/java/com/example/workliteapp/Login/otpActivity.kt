@@ -1,9 +1,11 @@
 package com.example.workliteapp.Login
 
+import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -99,6 +101,7 @@ class otpActivity : AppCompatActivity() {
             // This callback is invoked in an invalid request for verification is made,
             // for instance if the the phone number format is not valid.
 
+            Log.w(TAG, "onVerificationFailed", e)
 
             if (e is FirebaseAuthInvalidCredentialsException) {
                 // Invalid request
@@ -118,7 +121,7 @@ class otpActivity : AppCompatActivity() {
             // The SMS verification code has been sent to the provided phone number, we
             // now need to ask the user to enter the code and then construct a credential
             // by combining the code with a verification ID.
-
+            Log.d(TAG, "onCodeSent:$verificationId")
 
             // Save verification ID and resending token so we can use them later
             OTP=verificationId
@@ -135,6 +138,7 @@ class otpActivity : AppCompatActivity() {
                     sendToMain()
 
                 } else {
+                    Log.d(TAG, "signInWithPhoneAuthCredential: ${task.exception.toString()}")
                     // Sign in failed, display a message and update the UI
 
                     if (task.exception is FirebaseAuthInvalidCredentialsException) {

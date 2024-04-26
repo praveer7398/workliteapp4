@@ -52,6 +52,7 @@
         <!-- Date text -->
         <!-- Logout button -->
         <TextView
+            android:id="@+id/datetv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -92,9 +93,11 @@
         android:orientation="horizontal"
         android:layout_marginTop="4dp">
 
-        <androidx.appcompat.widget.AppCompatButton
+        <TextView
+            android:id="@+id/checkintime"
             android:layout_width="160dp"
             android:layout_height="100dp"
+            android:gravity="center"
             android:text="Check \nIn\n 9:00 A.M"
             android:background="@drawable/lineargradient_button"
             android:elevation="12dp"
@@ -103,11 +106,13 @@
             android:textSize="20sp"
             android:textColor="@android:color/black" >
 
-        </androidx.appcompat.widget.AppCompatButton>
+        </TextView>
 
-        <androidx.appcompat.widget.AppCompatButton
+        <TextView
+            android:id="@+id/checkouttime"
             android:layout_width="162dp"
             android:layout_height="100dp"
+            android:gravity="center"
             android:layout_marginStart="10dp"
             android:background="@drawable/lineargradient_button2"
             android:drawableStart="@drawable/checkout"
