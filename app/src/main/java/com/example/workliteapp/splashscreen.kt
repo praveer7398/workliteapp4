@@ -18,7 +18,7 @@ class splashscreen : AppCompatActivity() {
 
         // Delay for 2 seconds and then start the main activity
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, signinActivity::class.java)
             startActivity(intent)
             finish()
         }, 2000) // 2000 milliseconds
