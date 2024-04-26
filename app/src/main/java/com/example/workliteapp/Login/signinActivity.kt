@@ -136,7 +136,7 @@ class signinActivity : AppCompatActivity(){
     override fun onStart(){
         super.onStart()
         if(auth.currentUser!= null){
-            startActivity(Intent(this,MainActivity::class.java))
+          //  startActivity(Intent(this,MainActivity::class.java))
             }
         }
     }

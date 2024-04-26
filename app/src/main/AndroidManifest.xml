@@ -13,13 +13,7 @@
         android:theme="@style/Theme.Workliteapp"
         tools:targetApi="31">
 
-        <activity
-            android:name=".activity_chat"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+
         <activity
             android:name=".Card.CardActivity1"
             android:exported="false">

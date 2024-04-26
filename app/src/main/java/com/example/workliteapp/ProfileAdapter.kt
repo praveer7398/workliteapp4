@@ -2,13 +2,10 @@ package com.example.workliteapp
 
 
 import android.content.Context
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.workliteapp.databinding.LayoutProfileItemBinding
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.ktx.Firebase
 
 class ProfileAdapter(private val context: Context, private val list: List<ProfileItem>) :
     RecyclerView.Adapter<ProfileAdapter.CartViewHolder>() {
@@ -31,14 +28,6 @@ class ProfileAdapter(private val context: Context, private val list: List<Profil
 
         // You can set click listeners or any other functionality here
         // holder.itemView.setOnClickListener { /* Handle item click */ }
-
-        holder.itemView.setOnClickListener {
-            val intent = Intent(context,activity_chat::class.java)
-            intent.putExtra("name",currentItem.name)
-            intent.putExtra("uid",currentItem.imageResourceId)
-            context.startActivity(intent)
-
-        }
     }
 
     override fun getItemCount(): Int {
