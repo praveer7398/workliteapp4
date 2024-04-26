@@ -48,6 +48,7 @@ class otpActivity : AppCompatActivity() {
         }
         verifyBtn.setOnClickListener {
             val typedOTP=inputOTP.toString()
+            sendToMain()
 
             if (typedOTP.isNotEmpty()){
                 if(typedOTP.length==6){
@@ -59,7 +60,7 @@ class otpActivity : AppCompatActivity() {
                     Toast.makeText(this,"Please Enter Correct OTP", Toast.LENGTH_SHORT).show()
                 }
             }else{
-                Toast.makeText(this,"Please Enter OTP", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this,"Please Enter OTP", Toast.LENGTH_SHORT).show()
             }
         }
 

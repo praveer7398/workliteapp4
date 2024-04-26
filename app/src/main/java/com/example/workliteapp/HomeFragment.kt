@@ -1,6 +1,8 @@
 package com.example.workliteapp
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -22,6 +24,8 @@ import java.util.*
 class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
     private lateinit var adapter: taskAdapter
+    private lateinit var timeHandler: Handler
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,19 +50,46 @@ class HomeFragment : Fragment() {
         val currentDateTextView = view.findViewById<TextView>(R.id.datetv)
         val currentTimeTextView1 = view.findViewById<TextView>(R.id.checkintime)
         val currentTimeTextView2 = view.findViewById<TextView>(R.id.checkouttime)
+        val dayTextView = view.findViewById<TextView>(R.id.day)
+
 
         val calendar = Calendar.getInstance()
+
+        val dayFormat = SimpleDateFormat("EEEE", Locale.getDefault())
+        val dayString = dayFormat.format(calendar.time)
+        dayTextView.text = dayString
+
 
         // Date
         val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
         val dateString = dateFormat.format(calendar.time)
         currentDateTextView.text = dateString
+        //Time
+
+        val timeFormat = SimpleDateFormat("HH:mm:ss", Locale.getDefault())
+        currentTimeTextView1.setOnClickListener {
+            val timeString = timeFormat.format(calendar.time)
+            currentTimeTextView1.text = timeString
+        }
+
 
         // Time
-        val timeFormat = SimpleDateFormat("HH:mm:ss", Locale.getDefault())
-        val timeString = timeFormat.format(calendar.time)
-        currentTimeTextView1.text = timeString
-        currentTimeTextView2.text = timeString
+        timeHandler = Handler(Looper.getMainLooper())
+        timeHandler.post(object : Runnable {
+            override fun run() {
+                val timeFormat = SimpleDateFormat("HH:mm:ss", Locale.getDefault())
+                currentTimeTextView2.setOnClickListener {
+                val timeString = timeFormat.format(Calendar.getInstance().time)
+                currentTimeTextView2.text = timeString}
+                //currentTimeTextView2.text = timeString
+                timeHandler.postDelayed(this, 1000)
+            }
+        })
+    }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        // Stop updating the time when the fragment is destroyed
+        timeHandler.removeCallbacksAndMessages(null)
     }
 
 
