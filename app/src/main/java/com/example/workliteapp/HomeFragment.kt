@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.fragment.app.Fragment
@@ -14,6 +15,7 @@ import com.google.android.gms.common.util.CollectionUtils
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import java.text.SimpleDateFormat
 import java.util.*
 
 
@@ -37,6 +39,26 @@ class HomeFragment : Fragment() {
         retrieveDataFromFirestore()
         return binding.root
 
+    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val currentDateTextView = view.findViewById<TextView>(R.id.datetv)
+        val currentTimeTextView1 = view.findViewById<TextView>(R.id.checkintime)
+        val currentTimeTextView2 = view.findViewById<TextView>(R.id.checkouttime)
+
+        val calendar = Calendar.getInstance()
+
+        // Date
+        val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+        val dateString = dateFormat.format(calendar.time)
+        currentDateTextView.text = dateString
+
+        // Time
+        val timeFormat = SimpleDateFormat("HH:mm:ss", Locale.getDefault())
+        val timeString = timeFormat.format(calendar.time)
+        currentTimeTextView1.text = timeString
+        currentTimeTextView2.text = timeString
     }
 
 
