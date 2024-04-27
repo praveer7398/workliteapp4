@@ -49,7 +49,7 @@
         android:fontFamily="@font/montaga"
         android:gravity="center"
         android:padding="15dp"
-        android:text="XYZ, \nYou are the Employee\n of the Month!!"
+        android:text="Poonam, \nYou are the Employee\n of the Month!!"
         android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="bold"
