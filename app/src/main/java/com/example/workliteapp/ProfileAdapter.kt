@@ -1,6 +1,7 @@
 package com.example.workliteapp
 
 
+import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
@@ -8,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.example.workliteapp.Login.signinActivity
 import com.example.workliteapp.databinding.LayoutProfileItemBinding
 
 class ProfileAdapter(private val context: Context, private val list: List<ProfileItem>) :
@@ -42,6 +44,28 @@ class ProfileAdapter(private val context: Context, private val list: List<Profil
                 intent.setData(Uri.parse("https://api.whatsapp.com/send?phone=$phoneNumber"));
                 context.startActivity(intent);
             }
+
+        holder.binding.imageView5.setOnClickListener {
+            val name= currentItem.name
+
+                val confirmationDialog = AlertDialog.Builder(context)
+                    .setTitle("Shift change")
+                    .setMessage("Are you sure you want to change your shift with $name?")
+                    .setPositiveButton("Shift Change") { _, _ ->
+                        Toast.makeText(context, "Shift Changed", Toast.LENGTH_SHORT)
+                            .show()
+
+
+
+
+
+                    }
+                    .setNegativeButton("Cancel", null) // Do nothing on cancellation
+                    .create()
+                confirmationDialog.show()
+
+
+        }
         }
 
 
