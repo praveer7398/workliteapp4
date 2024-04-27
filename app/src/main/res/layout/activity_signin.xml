@@ -54,7 +54,7 @@
 
         android:elevation="8dp"
         android:fontFamily="@font/montaga"
-        android:hint="username"
+        android:hint="username(नाम)"
         android:inputType="text"
         android:paddingStart="8dp"
         android:paddingTop="16dp"
@@ -79,7 +79,7 @@
 
         android:elevation="8dp"
         android:fontFamily="@font/montaga"
-        android:hint="Phone number"
+        android:hint="Phone number (फ़ोन नंबर)"
         android:inputType="number"
         android:paddingStart="8dp"
         android:paddingTop="16dp"

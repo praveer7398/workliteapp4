@@ -85,7 +85,7 @@
                     <soup.neumorphism.NeumorphTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Chef"
+                        android:text="Chef\n(बावर्ची)"
                         android:textColor="@color/black"
                         android:textStyle="bold"
                         android:textSize="16dp"
@@ -124,7 +124,7 @@
                     <soup.neumorphism.NeumorphTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Sweeper"
+                        android:text="Sweeper\n(झाड़ू देनेवाला)"
                         android:textColor="@color/black"
                         android:textStyle="bold"
                         android:textSize="16dp"
@@ -163,7 +163,7 @@
                     <soup.neumorphism.NeumorphTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Nanny"
+                        android:text="Nanny\n(आया)"
                         android:textColor="@color/black"
                         android:textStyle="bold"
                         android:textSize="16dp"
@@ -201,7 +201,7 @@
                     <soup.neumorphism.NeumorphTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Laundary"
+                        android:text="Laundry\n(धोबी)"
                         android:textColor="@color/black"
                         android:textStyle="bold"
                         android:textSize="16dp"
@@ -239,7 +239,7 @@
                     <soup.neumorphism.NeumorphTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Gardener"
+                        android:text="Gardener(माली)"
                         android:textColor="@color/black"
                         android:textStyle="bold"
                         android:textSize="16dp"
@@ -277,7 +277,7 @@
                     <soup.neumorphism.NeumorphTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Household"
+                        android:text="Household\n(घर का काम)"
                         android:textColor="@color/black"
                         android:textStyle="bold"
                         android:textSize="16dp"

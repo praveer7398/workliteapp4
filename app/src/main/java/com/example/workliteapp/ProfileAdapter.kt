@@ -32,7 +32,7 @@ class ProfileAdapter(private val context: Context, private val list: List<Profil
         // You can set click listeners or any other functionality here
         // holder.itemView.setOnClickListener { /* Handle item click */ }
         // Set click listener for WhatsApp chat
-        holder.binding.imageView4.setOnClickListener {
+        holder.binding.imageView6.setOnClickListener {
             val phoneNumber =
                 currentItem.phoneNumber // Assuming phoneNumber is a String field in your data object
 
