@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_add -> setCurrentFragment(cardFragment())
                 R.id.nav_pay -> setCurrentFragment(PayFragment())
                 R.id.nav_profile -> setCurrentFragment(ProfileFragment())
+             //   R.id.nav_complain -> setCurrentFragment(ComplaintFragment())
             }
             true
         }

@@ -52,7 +52,9 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val logoutButton = view.findViewById<TextView>(R.id.logout) // Replace with actual ID if set in layout
+        val logoutButton = view.findViewById<TextView>(R.id.logout)
+
+        // Replace with actual ID if set in layout
 
 
         logoutButton.setOnClickListener {
@@ -71,6 +73,14 @@ class HomeFragment : Fragment() {
                 .create()
             confirmationDialog.show()
         }
+        binding.complain.setOnClickListener {
+            val intent = Intent(context, ComplaintActivity::class.java)
+            startActivity(intent)
+
+
+        }
+
+
 
 
         val currentDateTextView = view.findViewById<TextView>(R.id.datetv)

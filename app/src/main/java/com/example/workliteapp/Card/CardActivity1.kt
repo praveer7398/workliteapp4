@@ -106,7 +106,7 @@ class CardActivity1 : AppCompatActivity() {
         db.document(key).set(data).addOnSuccessListener {
          //   dialog.dismiss()
 
-            Toast.makeText(this, "Product added", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Details added", Toast.LENGTH_SHORT).show()
             binding.fullNameEditText.text = null
         }
             .addOnFailureListener { e ->
