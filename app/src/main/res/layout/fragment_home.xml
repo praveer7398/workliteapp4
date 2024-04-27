@@ -42,7 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="24dp">
+        android:layout_marginTop="7dp">
         <!-- Calendar icon -->
         <ImageView
             android:layout_width="33dp"
@@ -72,9 +72,16 @@
             android:text="Logout"
             android:textColor="@color/black"
             android:textSize="20sp" />
+
     </LinearLayout>
 
     <!-- Day text -->
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
     <TextView
         android:id="@+id/day"
         android:layout_width="wrap_content"
@@ -86,6 +93,28 @@
         android:layout_marginTop="2dp"
         android:layout_marginStart="80dp"
         android:layout_marginBottom="20dp" />
+
+    <ImageView
+        android:id="@+id/complain"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/complain1"
+        android:layout_marginStart="70dp"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/black"
+
+        android:fontFamily="@font/montaga"
+
+        android:text="Complaint\n(शिकायत)"/>
+
+
+</LinearLayout>
 
     <!-- Check-in and check-out buttons -->
     <!-- Check-in and check-out buttons -->
